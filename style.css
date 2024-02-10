@@ -197,24 +197,8 @@ img {
   color: #c3fae8;
 }
 
-/* RATINGS */
-.rating {
-  display: flex;
-  justify-content: space-between;
-}
-
-.stars {
-  display: flex;
-}
-
-.star {
-  height: 24px;
-  width: 24px;
-  stroke: #e6fcf5;
-}
-
 /* CONTROLS */
-.btn {
+.btn-arrows {
   background-color: #fff;
   border: none;
   height: 40px;
@@ -250,12 +234,11 @@ img {
   width: 24px;
   stroke: #087f5b;
 }
-
 .dots {
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, 48px);
+  transform: translate(-50%, 32px);
 
   display: flex;
   gap: 12px;
@@ -274,6 +257,21 @@ img {
   background-color: #087f5b;
 }
 
+/* RATINGS */
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+}
+
+.star {
+  height: 24px;
+  width: 24px;
+  stroke: #e6fcf5;
+}
 /* CHAIRS */
 
 .chair {
@@ -383,6 +381,8 @@ tbody tr:nth-child(even) {
   column-gap: 24px;
   row-gap: 32px;
   align-items: center;
+
+  transition: ease;
 }
 
 .number,
@@ -394,6 +394,16 @@ tbody tr:nth-child(even) {
 
 .number {
   color: #ced4da;
+}
+
+.btn-acc {
+  background: transparent;
+  border: none;
+  font-size: 0;
+}
+
+.btn-acc:hover {
+  cursor: pointer;
 }
 
 .icon {
