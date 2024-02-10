@@ -376,13 +376,8 @@ tbody tr:nth-child(even) {
   border-radius: 8px;
   padding: 24px;
 
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  column-gap: 24px;
-  row-gap: 32px;
-  align-items: center;
-
-  transition: ease;
+  transition: max-height 0.4s;
+  overflow: hidden;
 }
 
 .number,
@@ -400,6 +395,14 @@ tbody tr:nth-child(even) {
   background: transparent;
   border: none;
   font-size: 0;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  justify-items: start;
+  align-items: center;
 }
 
 .btn-acc:hover {
@@ -413,13 +416,14 @@ tbody tr:nth-child(even) {
 }
 
 .hidden-box {
-  grid-column: 2;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s;
 }
 
 .hidden-box p {
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin: 32px 0 24px 0;
 }
 
 .hidden-box ul {
@@ -434,10 +438,11 @@ tbody tr:nth-child(even) {
 /* OPEN STATE */
 .open {
   border-top: 4px solid #087f5b;
+  transition: 0.2s;
 }
 
 .open .hidden-box {
-  display: block;
+  max-height: 1000px; /* Adjust this value to a large enough value */
 }
 
 .open .number,
